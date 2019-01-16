@@ -2,7 +2,6 @@
 
 namespace CleanCodeStudio\SparkVuexPreset; 
 
-use SparkVuexPreset\SparkVuexPreset;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\Console\PresetCommand;
 
@@ -10,10 +9,11 @@ class CleanCodeStudioServiceProvider extends ServiceProvider
 {
 	 public function boot()
 	 {
-		 		PresetCommand::macro('spark:vuex', function ($command) {
+		 		PresetCommand::macro('clean:spark-vuex', function ($command) {
 			
 						SparkVuexPreset::install();
-	 	
+
+            $command->info('Complete! Re-compile your assets to start using vuex with Spark!');
 	 		});
 	 }
 }
