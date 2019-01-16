@@ -1,36 +1,62 @@
+/**
+ * Import global javascript prototypes for easier filtering and searching
+ */
+require('javascript-prototypes')
 
-window._ = require('lodash');
-window.Popper = require('popper.js').default;
-window.$u = require('underscore')
-require('@Boot/prototypes')
-
-
+/**
+ * Import Vue and Vuex
+ */
 import Vue from 'vue'
 import store from './store'
 
-window.Vue = require('vue');
+import aliases from '@Boot/helpers.js'
 
-import FormattableDateTrait from "@Trait/time"
-import ViewPortableTrait from "@Trait/viewport"
 
-Vue.mixin(ViewPortableTrait)
+/**
+ * Bootstrap Global Vue Aliases and Helpers
+ */
+require('@Boot')
+
+/**
+ * Bootstrap Spark
+ */
+require('spark-bootstrap')
+
+/**
+ * Bootstrap Our Components
+ */
+require('@Component/bootstrap')
+
+
+/**
+ * Global Vue Mixins
+ */
+import FormattableDateTrait from '@Trait/time'
+import ViewPortableTrait from '@Trait/viewport'
+
 Vue.mixin(FormattableDateTrait)
+Vue.mixin(ViewPortableTrait)
 
 
-import { directive as onClickOutside } from 'vue-on-click-outside'
+/**
+ * Global Vue Directives
+ */
+
+import {directive as onClickOutside} from 'vue-on-click-outside'
+
 Vue.directive('on-click-outside', onClickOutside)
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
+/**
+ * Global Vue Components
+ */
+
+import GlobalComponents from '@Component/global-components'
+Vue.component('global-components', GlobalComponents);
 
 
-
-
-require('spark-bootstrap')
-require('@Component/bootstrap')
-require('../nova.spark/components/bootstrap')
-
-var app = new Vue({
-    mixins: [require('spark')],
-    store
+window.app = new Vue({
+    store,
+    mixins: [require('spark')]
 });
+
 

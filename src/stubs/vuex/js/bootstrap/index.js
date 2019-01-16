@@ -1,13 +1,20 @@
+import Vue from "vue/types/index";
+
 window.$mouse = {}
+
 
 import '@Boot/mouse'
 import '@Boot/helpers'
-import '@Boot/prototypes'
-import '@Boot/magicMethods'
-import app from "@Boot/app";
+import aliases from "@Boot/app";
 
-import 'lodash'
+let alias = function(alias, obj) {
+    Vue.prototype[alias] = obj
+    window[alias] = obj
+}
 
-iterate(app.aliases).forEach(([key, value]) => alias(key, value))
+export default Object.entries(aliases).forEach(([key, value]) => alias(key, value))
 
-import '@Boot/router'
+
+
+
+

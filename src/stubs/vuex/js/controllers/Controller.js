@@ -57,7 +57,7 @@ class Controller {
     store(mutation, resource)
     {
         if(typeof store !== 'undefined')
-            store.commit(`${this.module}/${mutation}`, resource)
+            app.$store.commit(`${this.module}/${mutation}`, resource)
         
         return this
     }

@@ -55,7 +55,7 @@ class PopUpController extends Controller
     
     props(size)
     {
-        return store.state.popups.popup[size].props
+        return app.$store.state.popups.popup[size].props
     }
     
 }
