@@ -57,7 +57,7 @@
         -webkit-overflow-scrolling: touch;
 
         text-align: center;
-        width: 20vw;
+        width: 350px;
         padding: 10px;
         background-color:#fff;
         border: 1px solid #d5d5d5;

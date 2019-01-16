@@ -11,13 +11,28 @@ class SparkVuexPreset extends LaravelPreset
 
 		protected static $npm = [
 				'add' => [
-						"vue" => "^2.5.17",
-	    			"vue-loader" => "^15.4.2",
-			    	"vue-on-click-outside" => "^1.0.3",
-	    			"vue-router" => "^3.0.2",
-	    			"vue-style-loader" => "^4.1.2",
-	    			"vue-template-compiler" => "^2.5.17",
-	    			"vuex" => "^3.0.1",
+			        "vue": "2.*",
+        			"vue-on-click-outside": "^1.0.3",
+        			"vuex": "*"
+			        "@babel/cli": "^7.2.3",
+			        "@babel/core": "^7.2.2",
+			        "@babel/preset-env": "^7.2.3",
+			        "axios": "^0.18",
+			        "bootstrap": "^4.1.1",
+			        "browser-sync": "^2.26.3",
+			        "browser-sync-webpack-plugin": "2.0.1",
+			        "cross-env": "^5.1",
+			        "javascript-prototypes": "^1.0.3",
+			        "jquery": "^3.2",
+			        "laravel-mix": "^2.0",
+			        "lodash": "^4.17.4",
+			        "moment": "^2.10.6",
+			        "popper.js": "^1.12",
+			        "promise": "^7.1.1",
+			        "rtlcss": "^2.2",
+			        "sweetalert": "^1.1.3",
+			        "underscore": "^1.9.1",
+			        "urijs": "^1.17.0",
 				],
 				'remove' => ['jquery', 'popper.js']
 		];

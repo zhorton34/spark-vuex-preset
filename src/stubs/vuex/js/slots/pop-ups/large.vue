@@ -1,7 +1,7 @@
 <template>
     <transition name="pop-fade" v-if="$pop.get(size).show">
         <div class="container-fluid" v-on-click-outside="close">
-            <img class="mobile-close-button pull-right clickable" @click="close" :src="png('tutorial-overlay/close')" />
+            <img class="fa fa-close pull-right clickable" @click="close"/>
             <component :is="component" v-if="typeof component === 'object'"></component>
             <div v-else v-html="component"></div>
         </div>

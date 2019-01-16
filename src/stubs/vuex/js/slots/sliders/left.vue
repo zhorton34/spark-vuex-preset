@@ -1,9 +1,9 @@
 <template>
     <transition name="slide-fade" v-if="slide.show">
         <aside class="container-fluid" v-on-click-outside="close">
-            <div class="text-right slide-header">
+            <div class="text-center slide-header">
                 <div id="logo">
-                    <a href="/" class="mp-global-logo-link"></a>
+                    <h2>Header</h2>
                 </div>
                 <a href="#" class="close-mm-menu" @click="close">
                     <i class="fa fa-angle-double-left pull-right"></i>
@@ -44,7 +44,6 @@
     .mp-global-logo-link
     {
         float:left;
-        background: transparent url('http://hunting-locator.loc/images/newmap-images/logo.png') 0 0 no-repeat;
         display: inline-block;
         height: 50px;
         width: 240px;
