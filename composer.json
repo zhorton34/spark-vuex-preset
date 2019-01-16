@@ -1,0 +1,23 @@
+{
+    "name": "clean-code-studio/spark-vuex-preset",
+    "description": "Laravel preset for installing vuex store, aliases, array prototypes to act similar to collections, and other helpful front-end functionality",
+    "license": "MIT",
+    "keywords": ["clean-code-studio", "laravel", "vue", "spark", "laravel preset", "vuex"],
+    "authors": [
+        {
+            "name": "Zak Horton",
+            "email": "zhorton999@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "CleanCodeStudio\\SparkVuexPreset\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": ["CleanCodeStudio\\SparkVuexPreset\\CleanCodeStudioServiceProvider"]
+        }
+    }
+}
