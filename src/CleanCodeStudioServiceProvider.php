@@ -2,6 +2,7 @@
 
 namespace CleanCodeStudio\SparkVuexPreset; 
 
+use SparkVuexPreset\SparkVuexPreset;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\Console\PresetCommand;
 
