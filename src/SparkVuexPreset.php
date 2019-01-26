@@ -13,7 +13,7 @@ class SparkVuexPreset extends LaravelPreset
 				'add' => [
 			        "vue" => "2.*",
         			"vue-on-click-outside" => "^1.0.3",
-        			"vuex" => "*"
+        			"vuex" => "*",
 			        "@babel/cli" => "^7.2.3",
 			        "@babel/core" => "^7.2.2",
 			        "@babel/preset-env" => "^7.2.3",
